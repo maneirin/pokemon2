@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+}
+
+.main-bg {
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top, #2563eb 0%, #0f172a 75%);
+
+  position: relative;
+}
+
+.main-bg::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(
+      rgba(255,255,255,0.08),
+      transparent
+    );
+
+  top: -200px;
+  right: -200px;
+
+  border-radius: 50%;
+}
+
+.trainer-card {
+
+  width: 430px;
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.12),
+      rgba(255,255,255,0.04)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.55);
+
+  transition: 0.3s;
+}
+
+.trainer-card:hover {
+
+  transform:
+    translateY(-6px)
+    rotateX(2deg)
+    rotateY(-2deg);
+}
+
+.trainer-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  background:
+    radial-gradient(
+      rgba(255,255,255,0.18),
+      transparent
+    );
+
+  top: -100px;
+  right: -100px;
+
+  border-radius: 50%;
+}
+
+.trainer-card::after {
+
+  content: "TRAINER CARD";
+
+  position: absolute;
+
+  top: 18px;
+  left: 22px;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.5);
+}
+
+.avatar {
+
+  width: 180px;
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255,255,255,0.8);
+
+  box-shadow:
+    0 0 35px rgba(255,255,255,0.25);
+
+  margin-bottom: 18px;
+}
+
+.trainer-card h1 {
+
+  font-size: 36px;
+
+  margin-bottom: 10px;
+
+  letter-spacing: 2px;
+}
+
+.trainer-id {
+
+  margin-top: 8px;
+
+  margin-bottom: 28px;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.45);
+}
+
+.trainer-info {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+.info-box {
+
+  padding: 14px;
+
+  border-radius: 18px;
+
+  background:
+    rgba(255,255,255,0.07);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  text-align: left;
+
+  transition: 0.25s;
+}
+
+.info-box:hover {
+
+  transform: translateY(-3px);
+
+  background:
+    rgba(255,255,255,0.1);
+}
+
+.info-box span {
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255,255,255,0.45);
+
+  text-transform: uppercase;
+}
+
+.info-box h3 {
+
+  margin-top: 8px;
+
+  font-size: 18px;
+
+  color: white;
+}
+
+.pokeballs {
+
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.trainer-card:hover::before {
+
+  animation: glow 2s infinite linear;
+}
+
+@keyframes glow {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

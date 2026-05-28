@@ -1,0 +1,81 @@
+.pokeball {
+
+  width: 90px;
+  height: 90px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+.pokeball::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      rgba(255,255,255,0.12),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.pokeball img {
+
+  width: 72px;
+
+  filter:
+    drop-shadow(0 10px 18px rgba(0,0,0,0.45));
+
+  transition: 0.3s;
+}
+
+.pokeball:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.08);
+}
+
+.pokeball:hover::before {
+
+  opacity: 1;
+
+  transform: scale(1.2);
+}
+
+.pokeball:hover img {
+
+  transform:
+    rotate(18deg)
+    scale(1.08);
+}
+
+.disabled {
+
+  opacity: 0.18;
+
+  cursor: not-allowed;
+
+  filter: grayscale(1);
+}
