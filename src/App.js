@@ -13,7 +13,7 @@ function App() {
 
   return (
 
-    <BrowserRouter basename="/pokemon2">
+    <BrowserRouter>
 
       <Routes>
 
