@@ -39,9 +39,9 @@ function Pokemon() {
 
   return (
 
-    <div className="pokemon-bg">
+    <div className={`pokemon-bg ${pokemons.types[0].type.name}-bg`}>
 
-      <div className="pokemon-card">
+      <div className={`pokemon-card ${pokemons.types[0].type.name}`}>
 
         <img
           src={pokemons.sprites.front_default}

@@ -38,18 +38,16 @@ function Home() {
 
           <div className="info-box">
             <span>Pokémons</span>
-            <h3>2 / 6</h3>
+            <h3>3</h3>
           </div>
 
         </div>
         <div className="pokeballs">
 
           <PokeballButton pokemon="froakie" />
-
           <PokeballButton pokemon="oshawott" />
-
-          <PokeballButton locked={true} />
-          <PokeballButton locked={true} />
+          <PokeballButton pokemon="pikachu" />
+          <PokeballButton pokemon="clefairy" />
           <PokeballButton locked={true} />
           <PokeballButton locked={true} />
 
