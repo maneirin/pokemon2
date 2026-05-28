@@ -5,7 +5,7 @@ export function register() {
     window.addEventListener('load', () => {
 
       navigator.serviceWorker
-        .register('/service-worker.js')
+        .register('/pokemon2/service-worker.js')
 
         .then((registration) => {
 
